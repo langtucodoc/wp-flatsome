@@ -1,0 +1,14 @@
+/* Admin-area CSS overrides — minimal, only for order management UX */
+
+/* Highlight VND amounts in order list */
+.woocommerce-orders-page .amount {
+    color: #C0392B;
+    font-weight: 700;
+}
+
+/* Bundle product badge in order admin */
+.order-item-sku::before {
+    content: 'SKU: ';
+    color: #888;
+    font-size: 11px;
+}

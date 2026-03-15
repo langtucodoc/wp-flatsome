@@ -1,0 +1,61 @@
+# WordPress core - do NOT version control
+wp-admin/
+wp-includes/
+wp-*.php
+index.php
+xmlrpc.php
+license.txt
+readme.html
+
+# WordPress config - contains secrets
+wp-config.php
+
+# WooCommerce uploads / generated files
+wp-content/uploads/
+wp-content/wflogs/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/object-cache.php
+wp-content/db.php
+
+# Parent theme - installed separately via WordPress
+wp-content/themes/flatsome/
+
+# Plugins - installed via WordPress or composer
+wp-content/plugins/
+!wp-content/plugins/.gitkeep
+
+# OS / editor artifacts
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Node / build artifacts
+node_modules/
+dist/
+.npm/
+.yarn/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Composer
+vendor/
+composer.lock
+
+# Database exports - keep only in /database/
+*.sql.gz
+*.sql.bak

@@ -1,0 +1,171 @@
+/*
+ Theme Name:   Flatsome Child
+ Theme URI:    https://github.com/ngoctd/wp-flatsome
+ Description:  Custom child theme for Bình Trà Tử Sa Long Phụng landing page.
+               Built on top of Flatsome parent theme with WooCommerce support.
+               All project-specific customizations live here — never edit the parent theme.
+ Author:       ngoctd
+ Author URI:   https://github.com/ngoctd
+ Template:     flatsome
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  flatsome-child
+ Tags:         vietnamese, landing-page, woocommerce, tea, ecommerce
+*/
+
+/* ============================================================
+   CHILD THEME BASE — all structural overrides
+   Detailed component styles live in assets/css/landing.css
+   ============================================================ */
+
+/* ---------- CSS Custom Properties (Design Tokens) ---------- */
+:root {
+  /* Brand palette — inspired by traditional Vietnamese tea culture */
+  --clr-primary:        #8B4513;   /* Saddlebrown — clay/earth tone */
+  --clr-primary-dark:   #5C2D0A;   /* Deep mahogany */
+  --clr-primary-light:  #C4783A;   /* Warm amber */
+  --clr-gold:           #D4AF37;   /* Traditional gold */
+  --clr-gold-light:     #F5D878;   /* Light gold highlight */
+  --clr-red-accent:     #C0392B;   /* Promotion / urgency red */
+  --clr-text:           #2C1A0E;   /* Near-black warm brown */
+  --clr-text-muted:     #6B4C30;   /* Muted body text */
+  --clr-bg-light:       #FDF6EC;   /* Warm cream background */
+  --clr-bg-section:     #F5EDD8;   /* Alternate section background */
+  --clr-white:          #FFFFFF;
+  --clr-border:         #E8D5B0;   /* Soft gold border */
+
+  /* Typography */
+  --font-heading:       'Be Vietnam Pro', 'Roboto', sans-serif;
+  --font-body:          'Be Vietnam Pro', 'Open Sans', sans-serif;
+
+  /* Spacing scale */
+  --space-xs:   8px;
+  --space-sm:  16px;
+  --space-md:  32px;
+  --space-lg:  64px;
+  --space-xl: 100px;
+
+  /* Radius */
+  --radius-sm:  6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Shadow */
+  --shadow-card: 0 4px 20px rgba(44, 26, 14, 0.12);
+  --shadow-btn:  0 4px 14px rgba(139, 69, 19, 0.45);
+}
+
+/* ---------- Global resets that work with Flatsome ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--clr-text);
+  background-color: var(--clr-bg-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.3;
+  color: var(--clr-text);
+}
+
+a {
+  color: var(--clr-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--clr-primary-dark);
+}
+
+/* ---------- Utility classes ---------- */
+.text-gold       { color: var(--clr-gold) !important; }
+.text-primary    { color: var(--clr-primary) !important; }
+.text-red        { color: var(--clr-red-accent) !important; }
+.text-white      { color: var(--clr-white) !important; }
+.text-center     { text-align: center; }
+.bg-light        { background-color: var(--clr-bg-light) !important; }
+.bg-section      { background-color: var(--clr-bg-section) !important; }
+.bg-dark         { background-color: var(--clr-primary-dark) !important; }
+
+/* ---------- Override Flatsome header for landing page ---------- */
+.landing-page .header-wrapper {
+  background: var(--clr-primary-dark);
+}
+
+/* ---------- Flatsome UX Builder section overrides ---------- */
+.ux-section {
+  position: relative;
+}
+
+/* ---------- Global button style overrides ---------- */
+.button,
+.btn,
+button.button,
+input[type="submit"] {
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-btn);
+}
+
+/* Primary CTA button */
+.btn-cta,
+.woocommerce .single_add_to_cart_button,
+.btn-order-now {
+  background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-dark) 100%);
+  color: var(--clr-white) !important;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 16px 40px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-btn);
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover,
+.woocommerce .single_add_to_cart_button:hover,
+.btn-order-now:hover {
+  background: linear-gradient(135deg, var(--clr-primary-light) 0%, var(--clr-primary) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(139, 69, 19, 0.55);
+  color: var(--clr-white) !important;
+}
+
+/* Gold secondary button */
+.btn-gold {
+  background: linear-gradient(135deg, var(--clr-gold) 0%, var(--clr-primary-light) 100%);
+  color: var(--clr-primary-dark) !important;
+  font-weight: 800;
+}
+
+/* ---------- Responsive visibility helpers ---------- */
+@media (max-width: 767px) {
+  .hide-on-mobile  { display: none !important; }
+}
+@media (min-width: 768px) {
+  .hide-on-desktop { display: none !important; }
+}

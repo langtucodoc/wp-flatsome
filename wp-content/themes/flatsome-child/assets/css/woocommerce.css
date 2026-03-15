@@ -1,0 +1,226 @@
+/* =============================================================
+   WOOCOMMERCE OVERRIDES
+   Custom styles for checkout, cart, and order pages.
+   Vietnamese e-commerce optimised.
+   ============================================================= */
+
+/* ─── Checkout ──────────────────────────────────────────────── */
+
+.woocommerce-checkout #customer_details h3,
+.woocommerce-checkout #order_review_heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #3d1f0a;
+  border-bottom: 2px solid #D4AF37;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+.woocommerce-checkout .input-text,
+.woocommerce-checkout select,
+.woocommerce-checkout textarea {
+  border: 1px solid #D4AF37 !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  font-size: 15px !important;
+  color: #3d1f0a !important;
+  background: #FFFBF5 !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+
+.woocommerce-checkout .input-text:focus,
+.woocommerce-checkout select:focus {
+  border-color: #8B4513 !important;
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.15) !important;
+  outline: none !important;
+}
+
+.woocommerce-checkout label {
+  font-weight: 600 !important;
+  color: #5C2D0A !important;
+  font-size: 14px !important;
+  margin-bottom: 6px !important;
+  display: block !important;
+}
+
+.woocommerce-checkout .form-row {
+  margin-bottom: 20px !important;
+}
+
+/* Place order button */
+.woocommerce #payment #place_order,
+.woocommerce-checkout #place_order {
+  background: linear-gradient(135deg, #8B4513 0%, #5C2D0A 100%) !important;
+  color: #fff !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  padding: 18px 40px !important;
+  border-radius: 999px !important;
+  border: none !important;
+  cursor: pointer !important;
+  width: 100% !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 20px rgba(139, 69, 19, 0.5) !important;
+  transition: all 0.3s !important;
+}
+
+.woocommerce #payment #place_order:hover,
+.woocommerce-checkout #place_order:hover {
+  background: linear-gradient(135deg, #C4783A 0%, #8B4513 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 32px rgba(139, 69, 19, 0.6) !important;
+}
+
+/* Order summary table */
+.woocommerce-checkout-review-order-table {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 16px rgba(44, 26, 14, 0.08) !important;
+}
+
+.woocommerce-checkout-review-order-table th,
+.woocommerce-checkout-review-order-table td {
+  padding: 14px 20px !important;
+  font-size: 15px !important;
+}
+
+.woocommerce-checkout-review-order-table thead th {
+  background: #5C2D0A !important;
+  color: #D4AF37 !important;
+  font-weight: 700 !important;
+}
+
+.woocommerce-checkout-review-order-table tfoot tr.order-total td,
+.woocommerce-checkout-review-order-table tfoot tr.order-total th {
+  background: #FDF6EC !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: #C0392B !important;
+}
+
+/* Payment box */
+.woocommerce #payment {
+  background: #FFFBF5 !important;
+  border-radius: 12px !important;
+  border: 1px solid #E8D5B0 !important;
+}
+
+/* ─── Cart ──────────────────────────────────────────────────── */
+
+.woocommerce-cart .woocommerce {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.woocommerce-cart table.cart td,
+.woocommerce-cart table.cart th {
+  padding: 16px 20px;
+}
+
+.woocommerce-cart table.cart .product-name a {
+  font-weight: 600;
+  color: #5C2D0A;
+  font-size: 15px;
+}
+
+.woocommerce-cart .cart_totals {
+  background: #FFFBF5;
+  border: 1px solid #E8D5B0;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.woocommerce-cart .cart_totals h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #3d1f0a;
+  margin-bottom: 20px;
+}
+
+.woocommerce-cart .wc-proceed-to-checkout .checkout-button {
+  background: linear-gradient(135deg, #8B4513, #5C2D0A) !important;
+  border-radius: 999px !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  padding: 16px 32px !important;
+  box-shadow: 0 4px 16px rgba(139, 69, 19, 0.4) !important;
+}
+
+/* ─── Thank you page ────────────────────────────────────────── */
+
+.woocommerce-thankyou .woocommerce-order {
+  max-width: 720px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.woocommerce-thankyou .woocommerce-order-received__title {
+  color: #27ae60;
+  font-size: 32px;
+}
+
+.woocommerce-thankyou .woocommerce-notice--success {
+  background: #f0fdf4;
+  border: 2px solid #27ae60;
+  border-radius: 12px;
+  padding: 20px 24px;
+  color: #166534;
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+/* ─── WooCommerce notices ────────────────────────────────────── */
+
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+  border-radius: 10px !important;
+  padding: 16px 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.woocommerce-error {
+  border-top-color: #C0392B !important;
+  background: #fef2f2 !important;
+  color: #991b1b !important;
+}
+
+.woocommerce-message {
+  border-top-color: #27ae60 !important;
+  background: #f0fdf4 !important;
+  color: #166534 !important;
+}
+
+/* ─── COD Payment method ────────────────────────────────────── */
+
+/* Highlight COD (cash on delivery) as default/preferred for VN market */
+.payment_method_cod label {
+  font-weight: 700 !important;
+  color: #5C2D0A !important;
+}
+
+.payment_method_cod .payment_box {
+  background: #FDF6EC !important;
+  border-left: 3px solid #D4AF37 !important;
+  border-radius: 0 8px 8px 0 !important;
+}
+
+/* ─── Responsive ────────────────────────────────────────────── */
+
+@media (max-width: 767px) {
+  .woocommerce-checkout .col2-set .col-1,
+  .woocommerce-checkout .col2-set .col-2 {
+    width: 100% !important;
+    float: none !important;
+  }
+
+  .woocommerce-checkout #order_review {
+    width: 100% !important;
+    float: none !important;
+  }
+
+  .woocommerce #payment #place_order {
+    font-size: 16px !important;
+    padding: 16px 24px !important;
+  }
+}
